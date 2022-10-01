@@ -1,4 +1,4 @@
-# NativeBase TypeScript Expo Template
+# Carline
 
 The official NativeBase TypeScript template for [Expo](https://docs.expo.io/)
 
