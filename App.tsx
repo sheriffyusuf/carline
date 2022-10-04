@@ -1,17 +1,18 @@
-import React from "react";
+import * as SplashScreen from "expo-splash-screen";
 import {
-  Text,
-  Link,
-  HStack,
-  Center,
-  Heading,
-  Switch,
-  useColorMode,
-  NativeBaseProvider,
-  extendTheme,
-  VStack,
   Box,
+  Center,
+  extendTheme,
+  Heading,
+  HStack,
+  Link,
+  NativeBaseProvider,
+  Switch,
+  Text,
+  useColorMode,
+  VStack,
 } from "native-base";
+import React, { useEffect } from "react";
 import NativeBaseIcon from "./components/NativeBaseIcon";
 
 // Define the config
@@ -27,6 +28,10 @@ declare module "native-base" {
   interface ICustomTheme extends MyThemeType {}
 }
 export default function App() {
+  useEffect(() => {
+    SplashScreen.preventAutoHideAsync();
+    setTimeout(SplashScreen.hideAsync, 5000);
+  }, []);
   return (
     <NativeBaseProvider>
       <Center
