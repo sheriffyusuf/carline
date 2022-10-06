@@ -1,20 +1,16 @@
 import * as SplashScreen from "expo-splash-screen";
 import {
-  Box,
-  Center,
   extendTheme,
-  Heading,
   HStack,
-  Link,
   NativeBaseProvider,
   Switch,
   Text,
   useColorMode,
-  VStack,
 } from "native-base";
 import React from "react";
-import NativeBaseIcon from "./components/NativeBaseIcon";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import useCachedResources from "./hooks/useCachedResources";
+import Navigation from "./navigation";
 import { config, fonts } from "./theme/fonts";
 
 // Define the config
@@ -41,7 +37,10 @@ export default function App() {
   } else {
     return (
       <NativeBaseProvider>
-        <Center
+        <SafeAreaProvider>
+          <Navigation />
+        </SafeAreaProvider>
+        {/*  <Center
           _dark={{ bg: "blueGray.900" }}
           _light={{ bg: "blueGray.50" }}
           px={4}
@@ -49,7 +48,9 @@ export default function App() {
         >
           <VStack space={5} alignItems="center">
             <NativeBaseIcon />
-            <Heading size="lg">Welcome to NativeBase</Heading>
+            <Heading fontWeight={"normal"} size="lg">
+              Welcome to NativeBase
+            </Heading>
             <HStack space={2} alignItems="center">
               <Text>Edit</Text>
               <Box
@@ -64,7 +65,7 @@ export default function App() {
                 _dark={{ bg: "blueGray.800" }}
                 _light={{ bg: "blueGray.200" }}
               >
-                App.js
+                App.jss
               </Box>
               <Text>and save to reload.</Text>
             </HStack>
@@ -75,7 +76,7 @@ export default function App() {
             </Link>
             <ToggleDarkMode />
           </VStack>
-        </Center>
+        </Center> */}
       </NativeBaseProvider>
     );
   }
