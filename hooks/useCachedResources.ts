@@ -21,6 +21,7 @@ import {
 } from "@expo-google-fonts/urbanist";
 //import { FontAwesome } from "@expo/vector-icons";
 //import * as Font from "expo-font";
+import * as Font from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import * as React from "react";
 
@@ -70,20 +71,34 @@ export default function useCachedResources() {
         SplashScreen.preventAutoHideAsync();
 
         // Load fonts
-        //   await Font.loadAsync({
-        //     ...FontAwesome.font,
-        //   });
+        await Font.loadAsync({
+          //     ...FontAwesome.font,
+        });
       } catch (e) {
         // We might want to provide this error information to an error reporting service
         console.warn(e);
       } finally {
-        setLoadingComplete(true);
-        SplashScreen.hideAsync();
+        // SplashScreen.hideAsync();
       }
     }
 
     loadResourcesAndDataAsync();
   }, []);
+
+  /*  const onLayoutRootView = React.useCallback(async () => {
+    if (fontsLoaded) {
+      await SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]); */
+  React.useEffect(() => {
+    async function loaded() {
+      if (fontsLoaded) {
+        await SplashScreen.hideAsync();
+        setLoadingComplete(true);
+      }
+    }
+    loaded();
+  }, [fontsLoaded]);
 
   return isLoadingComplete;
 }
