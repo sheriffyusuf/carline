@@ -2,9 +2,10 @@ import * as SplashScreen from "expo-splash-screen";
 import { extendTheme, NativeBaseProvider } from "native-base";
 import React from "react";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import useCachedResources from "./hooks/useCachedResources";
-import Navigation from "./navigation";
+import useCachedResources from "./src/hooks/useCachedResources";
+import Navigation from "./src/navigation";
 import { colors } from "./theme/colors";
+import components from "./theme/components";
 import { config, fonts, fontSizes } from "./theme/fonts";
 
 // Define the config
@@ -15,6 +16,7 @@ const configuration = {
   fonts,
   fontSizes,
   colors,
+  components,
 };
 
 // extend the theme
