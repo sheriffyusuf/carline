@@ -10,7 +10,7 @@ export default function OnboardingScreen({
   navigation,
 }: RootStackScreenProps<"Onboarding">) {
   const { width } = useWindowDimensions();
-  const [currentStep, setCurrentStep] = React.useState("two");
+  const [currentStep, setCurrentStep] = React.useState("one");
   return (
     <SafeAreaView
       style={[
@@ -27,15 +27,20 @@ export default function OnboardingScreen({
             Skip
           </Text>
         </Flex>
-        {/*   <OnboardingComponent
-          title="Find the best car without headaches"
-          subtitle="You choose your car online. We inspect it and deliver it."
-          showBackgroundImage={true}
-        /> */}
-        <OnboardingComponent
-          title="Let’s get started"
-          subtitle="Sign up or login to see what's happening near you"
-        />
+        {currentStep == "one" ? (
+          <OnboardingComponent
+            title="Find the best car without headaches"
+            subtitle="You choose your car online. We inspect it and deliver it."
+            showBackgroundImage={true}
+            onButtonClick={() => setCurrentStep("two")}
+          />
+        ) : (
+          <OnboardingComponent
+            title="Let’s get started"
+            subtitle="Sign up or login to see what's happening near you"
+            onButtonClick={() => navigation.navigate("GetStarted")}
+          />
+        )}
       </Flex>
     </SafeAreaView>
   );

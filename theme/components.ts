@@ -44,9 +44,11 @@ const components = {
             },
           }, */
       },
-      /*   outline: {
-        borderWidth: 2,
-      }, */
+      outline: {
+        _text: {
+          color: "white",
+        },
+      },
     },
     sizes: {
       lg: {
