@@ -26,7 +26,7 @@ const components = {
           }, */
 
         _light: {
-          bg: `white`,
+          bg: "white",
           /*  _hover: {
               bg: `${colorScheme}.200`,
             }, */
@@ -45,9 +45,7 @@ const components = {
           }, */
       },
       outline: {
-        _text: {
-          color: "white",
-        },
+        _text: { color: "white" },
       },
     },
     sizes: {
