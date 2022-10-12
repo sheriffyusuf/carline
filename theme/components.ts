@@ -44,8 +44,10 @@ const components = {
             },
           }, */
       },
-      outline: {
-        _text: { color: "white" },
+      outlined: {
+        _text: { color: "white", fontFamily: "Urbanist_500Medium" },
+        borderWidth: 1,
+        borderColor: "primary.300",
       },
     },
     sizes: {

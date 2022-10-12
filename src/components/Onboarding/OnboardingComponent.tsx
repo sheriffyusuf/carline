@@ -65,7 +65,7 @@ const OnboardingComponent: React.FC<Props> = ({
           {!showBackgroundImage && (
             <>
               <Spacer />
-              <Image source={car_two} alt="car_two" />
+              <Image source={car_two} alt="car_two" width={354} height={344} />
             </>
           )}
           <Spacer />

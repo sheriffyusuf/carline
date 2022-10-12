@@ -1,7 +1,9 @@
+import Ionicons from "@expo/vector-icons/Ionicons";
 import {
   Button,
   Flex,
   Heading,
+  Icon,
   Image,
   Spacer,
   StatusBar,
@@ -26,7 +28,7 @@ export default function GetStartedScreen({
       <StatusBar barStyle="light-content" backgroundColor="#000002" />
       <Flex flexDirection="column" flex="1" ml={6} mt={8} pb={8}>
         <Image source={logo} alt="logo" />
-        <ZStack mt={4}>
+        <ZStack>
           <Image source={logo_transparent} alt="logo_transparent" ml={24} />
           <VStack width={width * 0.6} space="3" mt={10}>
             <Heading fontSize="3xl" color="white" lineHeight="36">
@@ -41,8 +43,22 @@ export default function GetStartedScreen({
         <Spacer />
         <VStack mr={6} space={4}>
           <Button variant="primary">Next</Button>
-          <Button variant="outline">Continue with Google</Button>
-          <Button variant="outline">Continue with Apple</Button>
+          <Button
+            variant="outlined"
+            leftIcon={
+              <Icon as={Ionicons} name="ios-logo-google" color="white" />
+            }
+            color="red"
+          >
+            Continue with Google
+          </Button>
+          <Button
+            variant="outlined"
+            alignContent="start"
+            startIcon={<Icon as={Ionicons} name="logo-apple" color="white" />}
+          >
+            Continue with Apple
+          </Button>
         </VStack>
       </Flex>
     </SafeAreaView>
