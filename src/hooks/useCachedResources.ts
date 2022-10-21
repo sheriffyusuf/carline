@@ -47,6 +47,7 @@ export default function useCachedResources() {
     Urbanist_800ExtraBold_Italic,
     Urbanist_900Black,
     Urbanist_900Black_Italic,
+    TablerIcons: require("../../assets/tabler_icons/tabler-icons.ttf"),
   });
 
   // React.useEffect(() => {
