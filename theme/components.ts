@@ -49,6 +49,11 @@ const components = {
         borderWidth: 1,
         borderColor: "primary.300",
       },
+      outline: {
+        _text: { color: "gray.900", fontFamily: "Urbanist_500Medium" },
+        //  borderWidth: 1,
+        // borderColor: "primary.300",
+      },
     },
     sizes: {
       lg: {
@@ -58,6 +63,25 @@ const components = {
         },
       },
     },
+  },
+  Input: {
+    baseStyle: {
+      borderRadius: "xl",
+      _light: {
+        py: 4,
+        // px: 7,
+        // borderRadius: "xl",
+        bg: "gray.50",
+
+        // variant: "filled",
+        _text: {
+          //fontWeight: 800,
+          fontFamily: "Urbanist_700Bold",
+        },
+      },
+      // size: "lg",
+    },
+    variants: {},
   },
 };
 export default components;

@@ -3,7 +3,6 @@ import {
   Button,
   Flex,
   Heading,
-  Icon,
   Image,
   Spacer,
   StatusBar,
@@ -17,6 +16,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import car_three from "../../../assets/get_started/car_three.png";
 import logo_transparent from "../../../assets/get_started/logo_transparent.png";
 import logo from "../../../assets/logo.png";
+import OutlineButton from "../../components/OutlineButton";
 import { RootStackScreenProps } from "../../navigation/types";
 
 export default function GetStartedScreen({
@@ -42,23 +42,29 @@ export default function GetStartedScreen({
         </ZStack>
         <Spacer />
         <VStack mr={6} space={4}>
-          <Button variant="primary">Next</Button>
           <Button
-            variant="outlined"
-            leftIcon={
-              <Icon as={Ionicons} name="ios-logo-google" color="white" />
-            }
-            color="red"
+            variant="primary"
+            onPress={() => navigation.navigate("Login")}
+          >
+            Next
+          </Button>
+          <OutlineButton
+            iconAs={Ionicons}
+            iconName="ios-logo-google"
+            iconColor="white"
+            buttonVariant="outlined"
           >
             Continue with Google
-          </Button>
-          <Button
-            variant="outlined"
-            alignContent="start"
-            startIcon={<Icon as={Ionicons} name="logo-apple" color="white" />}
+          </OutlineButton>
+
+          <OutlineButton
+            iconAs={Ionicons}
+            iconName="logo-apple"
+            iconColor="white"
+            buttonVariant="outlined"
           >
             Continue with Apple
-          </Button>
+          </OutlineButton>
         </VStack>
       </Flex>
     </SafeAreaView>

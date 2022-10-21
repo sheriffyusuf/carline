@@ -36,6 +36,7 @@ export default function OnboardingScreen({
           />
         ) : (
           <OnboardingComponent
+            buttonVariant="primary"
             title="Let’s get started"
             subtitle="Sign up or login to see what's happening near you"
             onButtonClick={() => navigation.navigate("GetStarted")}
