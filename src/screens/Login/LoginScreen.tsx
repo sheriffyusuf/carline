@@ -7,6 +7,7 @@ import {
   Icon,
   Input,
   Pressable,
+  Spacer,
   StatusBar,
   Text,
   VStack,
@@ -88,39 +89,15 @@ export default function LoginScreen({
             Continue with Apple
           </OutlineButton>
         </VStack>
-        {/* <TablerIcons name="mail" size={50} color="red" /> */}
-        {/* <Image source={logo} alt="logo" />
-        <ZStack>
-          <Image source={logo_transparent} alt="logo_transparent" ml={24} />
-          <VStack width={width * 0.6} space="3" mt={10}>
-            <Heading fontSize="3xl" color="white" lineHeight="36">
-              Let’s get started
-            </Heading>
-            <Text color="gray.400" fontSize="md">
-              Sign up or login to see what's happening near you
-            </Text>
-          </VStack>
-          <Image source={car_three} alt="car_three" ml={10} mt={40} />
-        </ZStack>
         <Spacer />
-        <VStack mr={6} space={4}>
-          <Button variant="primary">Next</Button>
-          <OutlineButton
-            iconAs={Ionicons}
-            iconName="ios-logo-google"
-            iconColor="white"
-          >
-            Continue with Google
-          </OutlineButton>
-
-          <OutlineButton
-            iconAs={Ionicons}
-            iconName="logo-apple"
-            iconColor="white"
-          >
-            Continue with Apple
-          </OutlineButton>
-        </VStack> */}
+        <HStack space={1} justifyContent="center">
+          <Text>Dont have an account?</Text>
+          <Pressable>
+            <Text color="primary.500" fontWeight="bold">
+              Sign Up
+            </Text>
+          </Pressable>
+        </HStack>
       </Flex>
     </SafeAreaView>
   );

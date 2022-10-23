@@ -83,5 +83,6 @@ const components = {
     },
     variants: {},
   },
+  Text: { baseStyle: { fontSize: "md" } },
 };
 export default components;

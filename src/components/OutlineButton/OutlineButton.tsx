@@ -8,6 +8,7 @@ interface Props {
   iconAs?: any;
   iconName?: string;
   iconColor?: string;
+  buttonVariant?: string;
   onPress?: () => void;
 }
 
@@ -18,6 +19,7 @@ const OutlineButton: React.FC<Props> = ({
   iconName,
   iconColor,
   onPress,
+  buttonVariant = "outline",
 }) => {
   return (
     <Box h="56px">
@@ -27,7 +29,7 @@ const OutlineButton: React.FC<Props> = ({
         )}
         <Button
           width="100%"
-          variant="outlined"
+          variant={buttonVariant}
           onPress={onPress}
           // alignContent="start"
           // startIcon={}

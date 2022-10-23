@@ -15,6 +15,7 @@ import car_two from "../../../assets/onboarding/car_two.png";
 interface Props {
   title: string;
   subtitle: string;
+  buttonVariant?: string;
   onButtonClick?: () => void;
   showBackgroundImage?: boolean;
 }
@@ -43,6 +44,7 @@ const OnboardingComponent: React.FC<Props> = ({
   title,
   subtitle,
   onButtonClick,
+  buttonVariant,
   showBackgroundImage = false,
 }) => {
   const { width } = useWindowDimensions();
@@ -69,7 +71,7 @@ const OnboardingComponent: React.FC<Props> = ({
             </>
           )}
           <Spacer />
-          <Button variant="primary" onPress={onButtonClick}>
+          <Button variant={buttonVariant} onPress={onButtonClick}>
             Next
           </Button>
         </Flex>
