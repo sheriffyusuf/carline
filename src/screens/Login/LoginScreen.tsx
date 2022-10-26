@@ -15,6 +15,7 @@ import {
 import React from "react";
 import { useWindowDimensions } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import GoogleIcon from "../../components/GoogleIcon";
 import OutlineButton from "../../components/OutlineButton";
 import TablerIcons from "../../components/TablerIcons/TablerIcons";
 import { RootStackScreenProps } from "../../navigation/types";
@@ -73,11 +74,7 @@ export default function LoginScreen({
         </VStack>
         <VStack space={4} mt={7}>
           <Button>Sign In</Button>
-          <OutlineButton
-            iconAs={Ionicons}
-            iconName="ios-logo-google"
-            iconColor="gray.900"
-          >
+          <OutlineButton iconElement={<GoogleIcon />}>
             Continue with Google
           </OutlineButton>
 
@@ -91,7 +88,7 @@ export default function LoginScreen({
         </VStack>
         <Spacer />
         <HStack space={1} justifyContent="center">
-          <Text>Dont have an account?</Text>
+          <Text>Don't have an account?</Text>
           <Pressable>
             <Text color="primary.500" fontWeight="bold">
               Sign Up

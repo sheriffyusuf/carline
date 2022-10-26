@@ -16,6 +16,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import car_three from "../../../assets/get_started/car_three.png";
 import logo_transparent from "../../../assets/get_started/logo_transparent.png";
 import logo from "../../../assets/logo.png";
+import GoogleIcon from "../../components/GoogleIcon";
 import OutlineButton from "../../components/OutlineButton";
 import { RootStackScreenProps } from "../../navigation/types";
 
@@ -48,12 +49,7 @@ export default function GetStartedScreen({
           >
             Next
           </Button>
-          <OutlineButton
-            iconAs={Ionicons}
-            iconName="ios-logo-google"
-            iconColor="white"
-            buttonVariant="outlined"
-          >
+          <OutlineButton iconElement={<GoogleIcon />} buttonVariant="outlined">
             Continue with Google
           </OutlineButton>
 
