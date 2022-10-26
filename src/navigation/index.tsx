@@ -4,6 +4,7 @@ import React from "react";
 import GetStartedScreen from "../screens/GetStarted/GetStartedScreen";
 import LoginScreen from "../screens/Login/LoginScreen";
 import OnboardingScreen from "../screens/Onboarding/OnboardingScreen";
+import SignupScreen from "../screens/Signup/SignupScreen";
 import { RootStackParamList } from "./types";
 
 export default function Navigation() {
@@ -32,6 +33,11 @@ function RootNavigator() {
       <Stack.Screen
         name="Login"
         component={LoginScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Signup"
+        component={SignupScreen}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
