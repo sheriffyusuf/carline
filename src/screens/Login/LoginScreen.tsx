@@ -24,6 +24,7 @@ export default function LoginScreen({
   navigation,
 }: RootStackScreenProps<"Login">) {
   const { width } = useWindowDimensions();
+  const [showPassword, setShowPassword] = React.useState(false);
   return (
     <SafeAreaView style={[{ flex: 1 }, { backgroundColor: "white" }]}>
       <StatusBar barStyle="dark-content" backgroundColor="#000002" />
@@ -44,7 +45,7 @@ export default function LoginScreen({
                 as={TablerIcons}
                 name="mail"
                 size={5}
-                ml="2"
+                ml="3"
                 color="muted.400"
               />
             }
@@ -53,14 +54,26 @@ export default function LoginScreen({
             size="lg"
             variant="filled"
             placeholder="Password"
+            type={showPassword ? "text" : "password"}
             InputLeftElement={
               <Icon
                 as={TablerIcons}
                 name="lock"
                 size={5}
-                ml="2"
+                ml="3"
                 color="muted.400"
               />
+            }
+            InputRightElement={
+              <Pressable onPress={() => setShowPassword(!showPassword)}>
+                <Icon
+                  as={TablerIcons}
+                  name={showPassword ? "eye" : "eye-off"}
+                  size={5}
+                  mr={3}
+                  color="muted.400"
+                />
+              </Pressable>
             }
           />
           <HStack space={1}>
@@ -89,7 +102,7 @@ export default function LoginScreen({
         <Spacer />
         <HStack space={1} justifyContent="center">
           <Text>Don't have an account?</Text>
-          <Pressable>
+          <Pressable onPress={() => navigation.navigate("Signup")}>
             <Text color="primary.500" fontWeight="bold">
               Sign Up
             </Text>
