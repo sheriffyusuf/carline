@@ -54,6 +54,15 @@ const components = {
         //  borderWidth: 1,
         // borderColor: "primary.300",
       },
+      poutline: {
+        _text: {
+          color: "primary.500",
+
+          fontFamily: "Urbanist_500Medium",
+        },
+        borderWidth: 1,
+        borderColor: "primary.500",
+      },
     },
     sizes: {
       lg: {
