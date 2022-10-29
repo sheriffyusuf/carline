@@ -4113,6 +4113,11 @@ expo-asset@~8.6.1:
     path-browserify "^1.0.0"
     url-parse "^1.5.9"
 
+expo-clipboard@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/expo-clipboard/-/expo-clipboard-1.1.0.tgz#15855993d0cbb451db9003475844ada901da713f"
+  integrity sha512-4A+X/OMZiK8ubXvfuNJ8L9iDLmrkwO9rdHIgU3ywhBQ3NlD2nqEVcN4ZHdD7cn4/WkmP/bu/LWeTdvVuyufO8Q==
+
 expo-constants@~13.2.2, expo-constants@~13.2.4:
   version "13.2.4"
   resolved "https://registry.yarnpkg.com/expo-constants/-/expo-constants-13.2.4.tgz#eab4a553f074b2c60ad7a158d3b82e3484a94606"
@@ -6653,6 +6658,18 @@ react-native-keyboard-aware-scroll-view@^0.9.5:
   dependencies:
     prop-types "^15.6.2"
     react-native-iphone-x-helper "^1.0.3"
+
+react-native-otp-input-expo@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/react-native-otp-input-expo/-/react-native-otp-input-expo-1.4.0.tgz#a678c0d87bad2191337e8bb1446e65314133fab0"
+  integrity sha512-ZCWI0rsUy8u90sR4/MA032Q4eVHWkCgtC164HrNx1sGbMAv+PTTRPOLIXsRssvpdENuurPEbBLZoZThYiZD9iA==
+  dependencies:
+    expo-clipboard "^1.1.0"
+
+react-native-otp-verify@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/react-native-otp-verify/-/react-native-otp-verify-1.1.2.tgz#f8a9ffd557a58458255ac9d77c17f5bf3e5a9d1c"
+  integrity sha512-EcVmK3lf3TACJn2QQ3+jyR+g7VgxvU4z6q+FjeKghJQdJECM0Xc+Fh6rg6UWh+msln6mMa1o7FLaXZr4sdN6ZQ==
 
 react-native-safe-area-context@4.3.1:
   version "4.3.1"
