@@ -103,7 +103,7 @@ export default function SignupScreen({
           </HStack>
         </VStack>
         <VStack space={4} mt={7}>
-          <Button>Sign Up</Button>
+          <Button onPress={() => navigation.navigate("Otp")}>Sign Up</Button>
           <OutlineButton iconElement={<GoogleIcon />}>
             Continue with Google
           </OutlineButton>

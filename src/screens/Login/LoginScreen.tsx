@@ -78,7 +78,7 @@ export default function LoginScreen({
           />
           <HStack space={1}>
             <Text>Forgot Password?</Text>
-            <Pressable>
+            <Pressable onPress={() => navigation.navigate("ForgotPassword")}>
               <Text color="primary.500" fontWeight="bold">
                 Reset it
               </Text>
