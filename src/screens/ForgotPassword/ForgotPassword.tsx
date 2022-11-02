@@ -53,7 +53,9 @@ export default function ForgotPasswordScreen({
         </VStack>
         <Spacer />
         <VStack space={4} mt={7}>
-          <Button>Reset Password</Button>
+          <Button onPress={() => navigation.navigate("NewPassword")}>
+            Reset Password
+          </Button>
           <Button variant="poutline" onPress={() => navigation.goBack()}>
             Return to Sign In
           </Button>

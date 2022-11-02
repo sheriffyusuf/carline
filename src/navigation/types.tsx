@@ -7,6 +7,7 @@ export type RootStackParamList = {
   Signup: undefined;
   Otp: undefined;
   ForgotPassword: undefined;
+  NewPassword: undefined;
   // Profile: { userId: string };
   // Feed: { sort: 'latest' | 'top' } | undefined;
 };
