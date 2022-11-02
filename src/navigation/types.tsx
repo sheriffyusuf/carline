@@ -8,6 +8,7 @@ export type RootStackParamList = {
   Otp: undefined;
   ForgotPassword: undefined;
   NewPassword: undefined;
+  LocalAuth: undefined;
   // Profile: { userId: string };
   // Feed: { sort: 'latest' | 'top' } | undefined;
 };

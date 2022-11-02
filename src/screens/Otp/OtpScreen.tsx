@@ -43,7 +43,9 @@ export default function OtpScreen({ navigation }: RootStackScreenProps<"Otp">) {
         </VStack>
         <Spacer />
         <VStack space={4} mt={7}>
-          <Button>Continue</Button>
+          <Button onPress={() => navigation.navigate("LocalAuth")}>
+            Continue
+          </Button>
           <Button variant="poutline">Resend Code</Button>
         </VStack>
       </Flex>

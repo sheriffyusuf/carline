@@ -4,6 +4,7 @@ import React from "react";
 import ForgotPasswordScreen from "../screens/ForgotPassword/ForgotPassword";
 import NewPasswordScreen from "../screens/ForgotPassword/NewPassword";
 import GetStartedScreen from "../screens/GetStarted/GetStartedScreen";
+import LocalAuthScreen from "../screens/LocalAuth/LocalAuthScreen";
 import LoginScreen from "../screens/Login/LoginScreen";
 import OnboardingScreen from "../screens/Onboarding/OnboardingScreen";
 import OtpScreen from "../screens/Otp/OtpScreen";
@@ -56,6 +57,11 @@ function RootNavigator() {
       <Stack.Screen
         name="NewPassword"
         component={NewPasswordScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="LocalAuth"
+        component={LocalAuthScreen}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

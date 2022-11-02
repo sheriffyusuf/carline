@@ -13,10 +13,11 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Carline Authentication with TouchId or FaceID"
+      },
       "supportsTablet": true
     },
     "android": {
