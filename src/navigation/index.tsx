@@ -8,6 +8,7 @@ import LocalAuthScreen from "../screens/LocalAuth/LocalAuthScreen";
 import LoginScreen from "../screens/Login/LoginScreen";
 import OnboardingScreen from "../screens/Onboarding/OnboardingScreen";
 import OtpScreen from "../screens/Otp/OtpScreen";
+import PickInterestScreen from "../screens/PickInterest/PickInterestScreen";
 import SignupScreen from "../screens/Signup/SignupScreen";
 import { RootStackParamList } from "./types";
 
@@ -62,6 +63,11 @@ function RootNavigator() {
       <Stack.Screen
         name="LocalAuth"
         component={LocalAuthScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="PickInterest"
+        component={PickInterestScreen}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

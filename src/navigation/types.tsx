@@ -9,6 +9,7 @@ export type RootStackParamList = {
   ForgotPassword: undefined;
   NewPassword: undefined;
   LocalAuth: undefined;
+  PickInterest: undefined;
   // Profile: { userId: string };
   // Feed: { sort: 'latest' | 'top' } | undefined;
 };

@@ -50,7 +50,7 @@ export default function LocalAuthScreen({
         </VStack>
         <Spacer />
         <VStack space={4} mt={7}>
-          <Button onPress={() => navigation.navigate("NewPassword")}>
+          <Button onPress={() => navigation.navigate("PickInterest")}>
             {biometricType}
           </Button>
           <Button variant="poutline" onPress={() => navigation.goBack()}>
