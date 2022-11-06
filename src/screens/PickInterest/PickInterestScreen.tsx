@@ -134,7 +134,13 @@ export default function PickInterestScreen({
           )}
         />
 
-        <Button position="absolute" bottom="2" left="6" right="6">
+        <Button
+          position="absolute"
+          bottom="2"
+          left="6"
+          right="6"
+          onPress={() => navigation.navigate("Dashboard")}
+        >
           Finish
         </Button>
       </Flex>
