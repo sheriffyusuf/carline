@@ -24,6 +24,11 @@ import {
   RootStackParamList,
 } from "./types";
 
+import Heart from "../../assets/svg/heart.svg";
+import Home from "../../assets/svg/home.svg";
+import Message from "../../assets/svg/message.svg";
+import Profile from "../../assets/svg/profile.svg";
+
 export default function Navigation() {
   return (
     <NavigationContainer>
@@ -125,9 +130,12 @@ function BottomTabNavigator() {
         component={HomeScreen}
         options={({ navigation }: DashboardTabScreenProps<"Home">) => ({
           title: "Home",
-          tabBarIcon: ({ color, focused }) => (
-            <Icon as={TablerIcons} name="smart-home" size={6} color={color} />
-          ),
+          tabBarIcon: ({ color, focused }) =>
+            focused ? (
+              <Home />
+            ) : (
+              <Icon as={TablerIcons} name="smart-home" size={6} color={color} />
+            ),
         })}
       />
 
@@ -136,9 +144,12 @@ function BottomTabNavigator() {
         component={FavoritesScreen}
         options={({ navigation }: DashboardTabScreenProps<"Favorites">) => ({
           title: "Favorites",
-          tabBarIcon: ({ color, focused }) => (
-            <Icon as={TablerIcons} name="heart" size={6} color={color} />
-          ),
+          tabBarIcon: ({ color, focused }) =>
+            focused ? (
+              <Heart />
+            ) : (
+              <Icon as={TablerIcons} name="heart" size={6} color={color} />
+            ),
         })}
       />
 
@@ -147,9 +158,12 @@ function BottomTabNavigator() {
         component={MessageScreen}
         options={({ navigation }: DashboardTabScreenProps<"Message">) => ({
           title: "Message",
-          tabBarIcon: ({ color, focused }) => (
-            <Icon as={TablerIcons} name="message" size={6} color={color} />
-          ),
+          tabBarIcon: ({ color, focused }) =>
+            focused ? (
+              <Message />
+            ) : (
+              <Icon as={TablerIcons} name="message" size={6} color={color} />
+            ),
         })}
       />
 
@@ -158,9 +172,12 @@ function BottomTabNavigator() {
         component={ProfileScreen}
         options={({ navigation }: DashboardTabScreenProps<"Profile">) => ({
           title: "Profile",
-          tabBarIcon: ({ color, focused }) => (
-            <Icon as={TablerIcons} name="user" size={6} color={color} />
-          ),
+          tabBarIcon: ({ color, focused }) =>
+            focused ? (
+              <Profile />
+            ) : (
+              <Icon as={TablerIcons} name="user" size={6} color={color} />
+            ),
         })}
       />
     </BottomTab.Navigator>
