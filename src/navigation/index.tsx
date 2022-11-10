@@ -146,7 +146,7 @@ function BottomTabNavigator() {
           title: "Favorites",
           tabBarIcon: ({ color, focused }) =>
             focused ? (
-              <Heart />
+              <Heart fill="#4038FF" />
             ) : (
               <Icon as={TablerIcons} name="heart" size={6} color={color} />
             ),
