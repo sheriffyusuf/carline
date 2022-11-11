@@ -119,8 +119,8 @@ function BottomTabNavigator() {
         tabBarLabelStyle: {
           fontFamily: "Urbanist_700Bold",
           fontSize: 12,
-          /*  letterSpacing: -0.3,
-          fontSize: 12, */
+          letterSpacing: 0.5,
+          /*  fontSize: 12, */
           marginBottom: Platform.OS === "ios" ? 4 : 6,
         },
       })}

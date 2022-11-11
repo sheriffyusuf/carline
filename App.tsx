@@ -6,7 +6,7 @@ import useCachedResources from "./src/hooks/useCachedResources";
 import Navigation from "./src/navigation";
 import { colors } from "./theme/colors";
 import components from "./theme/components";
-import { config, fonts, fontSizes } from "./theme/fonts";
+import { config, fonts, fontSizes, lineHeights } from "./theme/fonts";
 
 // Define the config
 const configuration = {
@@ -15,6 +15,7 @@ const configuration = {
   fontConfig: config,
   fonts,
   fontSizes,
+  lineHeights,
   colors,
   components,
 };

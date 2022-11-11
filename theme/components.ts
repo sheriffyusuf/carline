@@ -93,5 +93,6 @@ const components = {
     variants: {},
   },
   Text: { baseStyle: { fontSize: "md" } },
+  Divider: { baseStyle: { bg: "gray.200" } },
 };
 export default components;
