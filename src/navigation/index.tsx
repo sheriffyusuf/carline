@@ -132,7 +132,7 @@ function BottomTabNavigator() {
           title: "Home",
           tabBarIcon: ({ color, focused }) =>
             focused ? (
-              <Home />
+              <Home fill={color} />
             ) : (
               <Icon as={TablerIcons} name="smart-home" size={6} color={color} />
             ),
@@ -146,7 +146,7 @@ function BottomTabNavigator() {
           title: "Favorites",
           tabBarIcon: ({ color, focused }) =>
             focused ? (
-              <Heart fill="#4038FF" />
+              <Heart fill={color} />
             ) : (
               <Icon as={TablerIcons} name="heart" size={6} color={color} />
             ),
@@ -160,7 +160,7 @@ function BottomTabNavigator() {
           title: "Message",
           tabBarIcon: ({ color, focused }) =>
             focused ? (
-              <Message />
+              <Message fill={color} />
             ) : (
               <Icon as={TablerIcons} name="message" size={6} color={color} />
             ),
@@ -174,7 +174,7 @@ function BottomTabNavigator() {
           title: "Profile",
           tabBarIcon: ({ color, focused }) =>
             focused ? (
-              <Profile />
+              <Profile fill={color} />
             ) : (
               <Icon as={TablerIcons} name="user" size={6} color={color} />
             ),

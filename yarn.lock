@@ -6932,7 +6932,7 @@ prompts@^2.3.2, prompts@^2.4.0:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.6.0, prop-types@^15.6.2:
+prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -7224,6 +7224,13 @@ react-native@0.69.6:
     use-sync-external-store "^1.0.0"
     whatwg-fetch "^3.0.0"
     ws "^6.1.4"
+
+react-number-format@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/react-number-format/-/react-number-format-5.1.1.tgz#8a36555e1041b833fbf39e9c07f3f24f58b66a51"
+  integrity sha512-wLRUP9G0B79hZrTRgj380/ygtKRJWrCnTBIlQkoYAp/AMNQK7qGkUAWM5EpS1YRxz1w003UmZoon8WRutnlFuw==
+  dependencies:
+    prop-types "^15.7.2"
 
 react-refresh@^0.4.0:
   version "0.4.3"
