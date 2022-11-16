@@ -2,6 +2,7 @@ import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { LinearGradient } from "expo-linear-gradient";
 import {
   Box,
+  Button,
   Divider,
   FlatList,
   Flex,
@@ -412,6 +413,24 @@ export default function HomeScreen({
                   ))}
                 </Flex>
               </View>
+              <Box mt={6} bg="gray.900" py={5} pl={5} mx={6} borderRadius="2xl">
+                <VStack alignItems="start">
+                  <Text color="white" bold fontSize="lg" lineHeight="xl">
+                    Test drive in your area
+                  </Text>
+                  <Text fontSize="md" color="gray.400" mt={1}>
+                    {`Test drive from your home\n or a Carline hub.`}
+                  </Text>
+                  <Button
+                    variant="outline"
+                    _text={{ color: "white" }}
+                    size="md"
+                    mt={4}
+                  >
+                    View cars
+                  </Button>
+                </VStack>
+              </Box>
             </ScrollView>
           </HomeSkeleton>
         </Box>
