@@ -13,9 +13,11 @@ import {
   Pressable,
   ScrollView,
   Spacer,
+  StatusBar,
   Text,
   View,
   VStack,
+  ZStack,
 } from "native-base";
 import React from "react";
 import { useWindowDimensions } from "react-native";
@@ -29,6 +31,7 @@ import Car from "../../../../assets/svg/car.svg";
 import Ford from "../../../../assets/svg/ford.svg";
 import Lambo from "../../../../assets/svg/lambo.svg";
 import Search from "../../../../assets/svg/search.svg";
+import test_drive from "../../../../assets/test_drive.png";
 import TablerIcons from "../../../components/TablerIcons/TablerIcons";
 import { DashboardTabScreenProps } from "../../../navigation/types";
 
@@ -268,6 +271,7 @@ export default function HomeScreen({
 }: DashboardTabScreenProps<"Home">) {
   return (
     <SafeAreaView style={[{ flex: 1 }, { backgroundColor: "white" }]}>
+      <StatusBar barStyle="dark-content" />
       <Flex flexDirection="column" flex="1" pb={8}>
         <View px={6}>
           <Flex flexDir="row" py="3" alignItems="center">
@@ -413,23 +417,52 @@ export default function HomeScreen({
                   ))}
                 </Flex>
               </View>
-              <Box mt={6} bg="gray.900" py={5} pl={5} mx={6} borderRadius="2xl">
-                <VStack alignItems="start">
-                  <Text color="white" bold fontSize="lg" lineHeight="xl">
-                    Test drive in your area
-                  </Text>
-                  <Text fontSize="md" color="gray.400" mt={1}>
-                    {`Test drive from your home\n or a Carline hub.`}
-                  </Text>
-                  <Button
-                    variant="outline"
-                    _text={{ color: "white" }}
-                    size="md"
-                    mt={4}
-                  >
-                    View cars
-                  </Button>
-                </VStack>
+              <Box
+                height="180"
+                mt={6}
+                bg="gray.900"
+                width="350"
+                py={5}
+                pl={5}
+                mx={6}
+                borderRadius="2xl"
+                overflow="hidden"
+              >
+                <ZStack overflowX="clip">
+                  <VStack alignItems="start">
+                    <Text
+                      color="white"
+                      bold
+                      fontSize="lg"
+                      lineHeight="xl"
+                      letterSpacing="0.4"
+                    >
+                      Test drive in your area
+                    </Text>
+                    <Text
+                      fontSize="sm"
+                      color="gray.400"
+                      mt={1}
+                      letterSpacing="0.5"
+                    >
+                      {`Test drive from your home\n or a Carline hub.`}
+                    </Text>
+                    <Button
+                      variant="outline"
+                      _text={{ color: "white" }}
+                      size="md"
+                      mt={4}
+                    >
+                      View cars
+                    </Button>
+                  </VStack>
+                  <Image
+                    source={test_drive}
+                    alt="car_three"
+                    right="-40"
+                    top="-30"
+                  />
+                </ZStack>
               </Box>
             </ScrollView>
           </HomeSkeleton>
