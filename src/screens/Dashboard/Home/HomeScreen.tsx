@@ -278,14 +278,16 @@ export default function HomeScreen({
             <Box p="3" borderWidth="1" borderColor="gray.200" borderRadius="xl">
               <Icon as={TablerIcons} name="map-pin" size={6} color="gray.900" />
             </Box>
-            <VStack ml={3}>
-              <Text fontWeight="medium" color="gray.500" fontSize="xs">
-                Location
-              </Text>
-              <Text fontWeight="bold" fontSize="sm">
-                San Francisco
-              </Text>
-            </VStack>
+            <Pressable onPress={() => navigation.navigate("PickLocation")}>
+              <VStack ml={3}>
+                <Text fontWeight="medium" color="gray.500" fontSize="xs">
+                  Location
+                </Text>
+                <Text fontWeight="bold" fontSize="sm">
+                  San Francisco
+                </Text>
+              </VStack>
+            </Pressable>
             <Spacer />
             <Box p="3" borderWidth="1" borderColor="gray.200" borderRadius="xl">
               <Icon as={TablerIcons} name="bell" size={6} color="gray.900" />

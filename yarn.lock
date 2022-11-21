@@ -1596,6 +1596,11 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
+"@iconscout/react-native-unicons@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@iconscout/react-native-unicons/-/react-native-unicons-1.0.3.tgz#edd2fb7596faf765931b29dfb0ece519cdadaabf"
+  integrity sha512-fP/INOvoqNv6j7Ysft4uiB/vRi0jAPNpLaefM3SNGtDssCN619DJtHUKLQR6wTb+5aIbhwu99Hb+GrpM5S8Vtw==
+
 "@internationalized/date@^3.0.1":
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/@internationalized/date/-/date-3.0.1.tgz#66332e9ca8f59b7be010ca65d946bca430ba4b66"

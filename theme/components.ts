@@ -17,6 +17,7 @@ const components = {
       primary: {
         _text: {
           color: `primary.500`,
+          //lineHeight: "xl",
         },
         /*    _icon: {
             color: `${colorScheme}.900`,
@@ -57,9 +58,10 @@ const components = {
       poutline: {
         _text: {
           color: "primary.500",
-
-          fontFamily: "Urbanist_500Medium",
+          fontFamily: "Urbanist_700Bold",
+          lineHeight: "sm",
         },
+
         borderWidth: 1,
         borderColor: "primary.500",
       },

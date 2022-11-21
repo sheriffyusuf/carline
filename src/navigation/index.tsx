@@ -28,6 +28,7 @@ import Heart from "../../assets/svg/heart.svg";
 import Home from "../../assets/svg/home.svg";
 import Message from "../../assets/svg/message.svg";
 import Profile from "../../assets/svg/profile.svg";
+import LocationScreen from "../screens/ChooseLocation/LocationScreen";
 
 export default function Navigation() {
   return (
@@ -41,7 +42,13 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        //     headerBackImageSource:
+
+        headerTitleStyle: { fontFamily: "Urbanist_700Bold", fontSize: 18 },
+      }}
+    >
       <Stack.Screen
         name="Dashboard"
         component={BottomTabNavigator}
@@ -92,6 +99,14 @@ function RootNavigator() {
         component={PickInterestScreen}
         options={{ headerShown: false }}
       />
+      <Stack.Screen
+        name="PickLocation"
+        component={LocationScreen}
+        options={{
+          headerTitle: "Choose your location",
+        }}
+        //  options={{ headerShown: false }}
+      />
     </Stack.Navigator>
   );
 }
@@ -113,6 +128,7 @@ function BottomTabNavigator() {
         headerShown: false,
         tabBarStyle: {
           backgroundColor: "white",
+          paddingTop: 8,
         },
         tabBarActiveTintColor: "#4038ff",
 

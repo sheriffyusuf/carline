@@ -13,6 +13,7 @@ export type RootStackParamList = {
   LocalAuth: undefined;
   PickInterest: undefined;
   Dashboard: undefined;
+  PickLocation: undefined;
   // Home: undefined;
   // Profile: { userId: string };
   // Feed: { sort: 'latest' | 'top' } | undefined;
