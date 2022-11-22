@@ -29,6 +29,7 @@ import Home from "../../assets/svg/home.svg";
 import Message from "../../assets/svg/message.svg";
 import Profile from "../../assets/svg/profile.svg";
 import LocationScreen from "../screens/ChooseLocation/LocationScreen";
+import ListCarScreen from "../screens/ListCar/ListCarScreen";
 
 export default function Navigation() {
   return (
@@ -44,7 +45,13 @@ function RootNavigator() {
   return (
     <Stack.Navigator
       screenOptions={{
-        //     headerBackImageSource:
+        /* headerBackImageSource: {
+          uri: arrow.toString(),
+          width: 24,
+          height: 24,
+        }, */
+
+        headerBackTitleVisible: false,
 
         headerTitleStyle: { fontFamily: "Urbanist_700Bold", fontSize: 18 },
       }}
@@ -104,6 +111,14 @@ function RootNavigator() {
         component={LocationScreen}
         options={{
           headerTitle: "Choose your location",
+        }}
+        //  options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="ListCar"
+        component={ListCarScreen}
+        options={{
+          headerTitle: "Available Cars",
         }}
         //  options={{ headerShown: false }}
       />

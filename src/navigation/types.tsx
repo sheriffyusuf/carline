@@ -14,6 +14,7 @@ export type RootStackParamList = {
   PickInterest: undefined;
   Dashboard: undefined;
   PickLocation: undefined;
+  ListCar: undefined;
   // Home: undefined;
   // Profile: { userId: string };
   // Feed: { sort: 'latest' | 'top' } | undefined;
