@@ -269,6 +269,7 @@ const CarCard = () => {
 export default function HomeScreen({
   navigation,
 }: DashboardTabScreenProps<"Home">) {
+  const { width: w } = useWindowDimensions();
   return (
     <SafeAreaView style={[{ flex: 1 }, { backgroundColor: "white" }]}>
       <StatusBar barStyle="dark-content" />
@@ -423,7 +424,7 @@ export default function HomeScreen({
                 height="180"
                 mt={6}
                 bg="gray.900"
-                width="350"
+                width={w - 48}
                 py={5}
                 pl={5}
                 mx={6}
