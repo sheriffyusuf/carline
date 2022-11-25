@@ -274,7 +274,16 @@ export default function HomeScreen({
     <SafeAreaView style={[{ flex: 1 }, { backgroundColor: "white" }]}>
       <StatusBar barStyle="dark-content" />
       <Flex flexDirection="column" flex="1" pb={8}>
-        <View px={6}>
+        <Box
+          px={6}
+          bg="white"
+          style={{
+            shadowOffset: { width: 0, height: 2 },
+            shadowColor: "#6B7280",
+            shadowOpacity: 0.08,
+            //  shadowRadius: 1,
+          }}
+        >
           <Flex flexDir="row" py="3" alignItems="center">
             <Box p="3" borderWidth="1" borderColor="gray.200" borderRadius="xl">
               <Icon as={TablerIcons} name="map-pin" size={6} color="gray.900" />
@@ -294,182 +303,183 @@ export default function HomeScreen({
               <Icon as={TablerIcons} name="bell" size={6} color="gray.900" />
             </Box>
           </Flex>
-          <Box mt={4} bg="gray.100" borderRadius="2xl">
-            <Input
-              size="lg"
-              variant="unstyled"
-              bg="gray.100"
-              placeholder="Search cars..."
-              InputRightElement={
-                <Pressable onPress={() => true} py={4} pr={4}>
-                  <Search />
-                </Pressable>
-              }
-            />
-          </Box>
-        </View>
-        <Box mt={6}>
-          <HomeSkeleton isLoading={false}>
-            <ScrollView showsVerticalScrollIndicator={false} marginBottom={20}>
-              <View px={6}>
-                <Flex
-                  flexDir="row"
-                  justifyContent="space-between"
-                  alignItems="center"
-                >
-                  <Text fontSize={18} bold lineHeight="lg">
-                    Top brands
-                  </Text>
-                  <Text color="gray.500" lineHeight="xl" fontSize="sm">
-                    View all
-                  </Text>
-                </Flex>
-                <Flex flexDir="row" mt={4}>
-                  {topBrands.map((item, i) => (
-                    <Box
-                      py="4"
-                      flex="1"
-                      borderWidth="1"
-                      key={i}
-                      borderColor="gray.200"
-                      borderRadius="xl"
-                      ml={i == 0 ? null : 4}
-                    >
-                      <VStack space={3} alignItems="center">
-                        <Box
-                          width={10}
-                          height={10}
-                          backgroundColor={"gray.900"}
-                          alignItems="center"
-                          borderRadius="10px"
-                          justifyContent="center"
-                        >
-                          {item.logo}
-                        </Box>
-                        <Text fontSize="sm" bold color="gray.900">
-                          {item.name}
-                        </Text>
-                      </VStack>
-                    </Box>
-                  ))}
-                </Flex>
-              </View>
+        </Box>
+
+        <HomeSkeleton isLoading={false}>
+          <ScrollView showsVerticalScrollIndicator={false}>
+            <Box mt={4} bg="gray.100" borderRadius="2xl" mx={6}>
+              <Input
+                size="lg"
+                variant="unstyled"
+                bg="gray.100"
+                placeholder="Search cars..."
+                InputRightElement={
+                  <Pressable onPress={() => true} py={4} pr={4}>
+                    <Search />
+                  </Pressable>
+                }
+              />
+            </Box>
+            <View px={6} mt={4}>
               <Flex
                 flexDir="row"
                 justifyContent="space-between"
                 alignItems="center"
-                marginTop={6}
-                px={6}
               >
                 <Text fontSize={18} bold lineHeight="lg">
-                  Car recommendation
+                  Top brands
                 </Text>
                 <Text color="gray.500" lineHeight="xl" fontSize="sm">
                   View all
                 </Text>
               </Flex>
-              <FlatList
-                data={[1, 2]}
-                marginTop={5}
-                pl={6}
-                horizontal={true}
-                showsHorizontalScrollIndicator={false}
-                ItemSeparatorComponent={() => <Box w={4} />}
-                renderItem={(i) => <CarCard />}
-              />
-              <View px={6} mt={8}>
-                <Flex
-                  flexDir="row"
-                  justifyContent="space-between"
-                  alignItems="center"
-                >
-                  <Text fontSize={18} bold lineHeight="lg">
-                    Shop by car type
-                  </Text>
-                  <Text color="gray.500" lineHeight="xl" fontSize="sm">
-                    View all
-                  </Text>
-                </Flex>
-                <Flex flexDir="row" mt={4}>
-                  {carTypes.map((item, i) => (
-                    <Box
-                      py="4"
-                      flex="1"
-                      borderWidth="1"
-                      key={i}
-                      borderColor="gray.200"
-                      borderRadius="xl"
-                      ml={i == 0 ? null : 4}
-                    >
-                      <VStack space={3} alignItems="center">
-                        <Box
-                          width={10}
-                          height={10}
-                          backgroundColor={"gray.900"}
-                          alignItems="center"
-                          borderRadius="10px"
-                          justifyContent="center"
-                        >
-                          {item.logo}
-                        </Box>
-                        <Text fontSize="sm" bold color="gray.900">
-                          {item.name}
-                        </Text>
-                      </VStack>
-                    </Box>
-                  ))}
-                </Flex>
-              </View>
-              <Box
-                height="180"
-                mt={6}
-                bg="gray.900"
-                width={w - 48}
-                py={5}
-                pl={5}
-                mx={6}
-                borderRadius="2xl"
-                overflow="hidden"
+              <Flex flexDir="row" mt={4}>
+                {topBrands.map((item, i) => (
+                  <Box
+                    py="4"
+                    flex="1"
+                    borderWidth="1"
+                    key={i}
+                    borderColor="gray.200"
+                    borderRadius="xl"
+                    ml={i == 0 ? null : 4}
+                  >
+                    <VStack space={3} alignItems="center">
+                      <Box
+                        width={10}
+                        height={10}
+                        backgroundColor={"gray.900"}
+                        alignItems="center"
+                        borderRadius="10px"
+                        justifyContent="center"
+                      >
+                        {item.logo}
+                      </Box>
+                      <Text fontSize="sm" bold color="gray.900">
+                        {item.name}
+                      </Text>
+                    </VStack>
+                  </Box>
+                ))}
+              </Flex>
+            </View>
+            <Flex
+              flexDir="row"
+              justifyContent="space-between"
+              alignItems="center"
+              marginTop={6}
+              px={6}
+            >
+              <Text fontSize={18} bold lineHeight="lg">
+                Car recommendation
+              </Text>
+              <Pressable onPress={() => navigation.navigate("ListCar")}>
+                <Text color="gray.500" lineHeight="xl" fontSize="sm">
+                  View all
+                </Text>
+              </Pressable>
+            </Flex>
+            <FlatList
+              data={[1, 2]}
+              marginTop={5}
+              pl={6}
+              horizontal={true}
+              showsHorizontalScrollIndicator={false}
+              ItemSeparatorComponent={() => <Box w={4} />}
+              renderItem={(i) => <CarCard />}
+            />
+            <View px={6} mt={8}>
+              <Flex
+                flexDir="row"
+                justifyContent="space-between"
+                alignItems="center"
               >
-                <ZStack overflowX="clip">
-                  <VStack alignItems="start">
-                    <Text
-                      color="white"
-                      bold
-                      fontSize="lg"
-                      lineHeight="xl"
-                      letterSpacing="0.4"
-                    >
-                      Test drive in your area
-                    </Text>
-                    <Text
-                      fontSize="sm"
-                      color="gray.400"
-                      mt={1}
-                      letterSpacing="0.5"
-                    >
-                      {`Test drive from your home\n or a Carline hub.`}
-                    </Text>
-                    <Button
-                      variant="outline"
-                      _text={{ color: "white" }}
-                      size="md"
-                      mt={4}
-                    >
-                      View cars
-                    </Button>
-                  </VStack>
-                  <Image
-                    source={test_drive}
-                    alt="car_three"
-                    right="-40"
-                    top="-30"
-                  />
-                </ZStack>
-              </Box>
-            </ScrollView>
-          </HomeSkeleton>
-        </Box>
+                <Text fontSize={18} bold lineHeight="lg">
+                  Shop by car type
+                </Text>
+                <Text color="gray.500" lineHeight="xl" fontSize="sm">
+                  View all
+                </Text>
+              </Flex>
+              <Flex flexDir="row" mt={4}>
+                {carTypes.map((item, i) => (
+                  <Box
+                    py="4"
+                    flex="1"
+                    borderWidth="1"
+                    key={i}
+                    borderColor="gray.200"
+                    borderRadius="xl"
+                    ml={i == 0 ? null : 4}
+                  >
+                    <VStack space={3} alignItems="center">
+                      <Box
+                        width={10}
+                        height={10}
+                        backgroundColor={"gray.900"}
+                        alignItems="center"
+                        borderRadius="10px"
+                        justifyContent="center"
+                      >
+                        {item.logo}
+                      </Box>
+                      <Text fontSize="sm" bold color="gray.900">
+                        {item.name}
+                      </Text>
+                    </VStack>
+                  </Box>
+                ))}
+              </Flex>
+            </View>
+            <Box
+              height="180"
+              mt={6}
+              bg="gray.900"
+              width={w - 48}
+              py={5}
+              pl={5}
+              mx={6}
+              borderRadius="2xl"
+              overflow="hidden"
+            >
+              <ZStack overflowX="clip">
+                <VStack alignItems="start">
+                  <Text
+                    color="white"
+                    bold
+                    fontSize="lg"
+                    lineHeight="xl"
+                    letterSpacing="0.4"
+                  >
+                    Test drive in your area
+                  </Text>
+                  <Text
+                    fontSize="sm"
+                    color="gray.400"
+                    mt={1}
+                    letterSpacing="0.5"
+                  >
+                    {`Test drive from your home\n or a Carline hub.`}
+                  </Text>
+                  <Button
+                    variant="outline"
+                    _text={{ color: "white" }}
+                    size="md"
+                    mt={4}
+                  >
+                    View cars
+                  </Button>
+                </VStack>
+                <Image
+                  source={test_drive}
+                  alt="car_three"
+                  right="-40"
+                  top="-30"
+                />
+              </ZStack>
+            </Box>
+          </ScrollView>
+        </HomeSkeleton>
       </Flex>
     </SafeAreaView>
   );
